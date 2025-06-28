@@ -1,0 +1,17 @@
+<nav class="navbar">
+  <a routerLink="/" class="logo text-white">
+    <i class="fas fa-code"></i>
+    <span>PORTFOLIO</span>
+  </a>
+  
+  <ul class="nav-links" [class.active]="isMenuOpen">
+    <li><a routerLink="/" (click)="closeMenu()" class="text-white">Home</a></li>
+    <li><a routerLink="/about" (click)="closeMenu()"class="text-white">About</a></li>
+    <li><a routerLink="/projects" (click)="closeMenu()" class="text-white">Projects</a></li>
+    <li><a routerLink="/courses" (click)="closeMenu()"class="text-white">Courses</a></li>
+  </ul>
+  
+  <button class="mobile-menu-btn" (click)="toggleMenu()" aria-label="Toggle menu">
+    <i class="fas text-white" [class.fa-bars]="!isMenuOpen" [class.fa-times]="isMenuOpen"></i>
+  </button>
+</nav>
