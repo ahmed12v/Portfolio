@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, inject, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-projects',
@@ -80,14 +80,20 @@ export class ProjectsComponent {
       codeUrl: '#'
     }
   ];
+  private platformID = inject(PLATFORM_ID)
 
   openProject(index: number) {
     this.activePopup = index;
+    if(isPlatformBrowser(this.platformID)){
     document.body.style.overflow = 'hidden';
+    }
   }
 
   closeProject() {
     this.activePopup = null;
-    document.body.style.overflow = 'auto';
+    if (isPlatformBrowser(this.platformID)) {
+       document.body.style.overflow = 'auto';
+    }
+   
   }
 }

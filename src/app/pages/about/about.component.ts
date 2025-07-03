@@ -2,11 +2,12 @@ import { animate, query, stagger, style, transition, trigger } from '@angular/an
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EducationComponent } from '../education/education.component';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [],
+  imports: [EducationComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
 })

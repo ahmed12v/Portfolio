@@ -1,0 +1,200 @@
+/* Modern Experience Section */
+.exp-alt-section {
+  padding: 5rem 0;
+}
+
+.exp-alt-title {
+  text-align: center;
+  font-size: 2.75rem;
+  margin-bottom: 4rem;
+  color: #5e7388;
+  position: relative;
+  font-weight: 700;
+}
+
+.exp-alt-title:after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5rem;
+  height: 0.25rem;
+  background: linear-gradient(90deg, #4ecca3, #8338ec);
+  border-radius: 1rem;
+}
+
+.exp-alt-timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.exp-alt-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.05);
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  transform: translateY(3rem);
+  opacity: 0;
+}
+
+.exp-alt-card.animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.exp-alt-card.current {
+  border-left: 4px solid #4ecca3;
+}
+
+.exp-alt-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+  z-index: 0;
+  transition: width 1.5s ease-out;
+}
+
+.exp-alt-card.animate .exp-alt-progress {
+  width: 100%;
+}
+
+.exp-alt-content {
+  position: relative;
+  z-index: 1;
+  padding: 2.5rem;
+}
+
+.exp-alt-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.exp-alt-header h3 {
+  font-size: 1.5rem;
+  color: #212529;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.exp-alt-date {
+  background: #e9ecef;
+  color: #495057;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.exp-alt-badge {
+  background: linear-gradient(90deg, #4ecca3, #8338ec);
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
+}
+
+.exp-alt-body p {
+  color: #495057;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.exp-alt-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.exp-alt-skills span {
+  background: #f1f3f5;
+  color: #4ecca3;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.exp-alt-skills span:hover {
+  background: #4ecca3;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.exp-alt-footer {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.exp-alt-dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: white;
+  border: 3px solid #4ecca3;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.exp-alt-line {
+  flex-grow: 1;
+  height: 2px;
+  background: linear-gradient(90deg, #4ecca3, transparent);
+}
+
+/* Animations */
+@keyframes cardEntrance {
+  from { 
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .exp-alt-content {
+    padding: 1.75rem;
+  }
+  
+  .exp-alt-title {
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
+    margin-top: 50px;
+  }
+  
+  .exp-alt-header h3 {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .exp-alt-section {
+    padding: 3rem 0;
+  }
+  
+  .exp-alt-card {
+    margin-bottom: 2.5rem;
+  }
+  
+  .exp-alt-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,207 @@
+/* Education & Languages Section */
+.education-section {
+  padding: 80px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* Shared Card Styles */
+.education-card,
+.languages-card {
+  background: rgb(255, 255, 255);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.education-card.animate__animated,
+.languages-card.animate__animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.education-card:hover,
+.languages-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.section-header i {
+  font-size: 1.8rem;
+  color: #4ecca3;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  position: relative;
+}
+
+/* Education Card Specific */
+.education-item {
+  display: flex;
+  gap: 20px;
+}
+
+.education-content {
+  flex: 1;
+}
+
+.education-content h3 {
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+  font-size: 1.3rem;
+}
+
+.education-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.institution,
+.duration {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4a5568;
+}
+
+.institution::before {
+  content: "\f19c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+
+.duration::before {
+  content: "\f073";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+
+.education-icon {
+  width: 60px;
+  height: 60px;
+  background: #e0e7ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4ecca3;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Languages Card Specific */
+.languages-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.language-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.language-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.language-name {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.language-level {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.language-progress {
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #4ecca3, #182848);
+  border-radius: 4px;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: progressAnimation 1.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+@keyframes progressAnimation {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.education-card {
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+.languages-card {
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .education-card,
+  .languages-card {
+    padding: 20px;
+  }
+  
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .education-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .education-item {
+    flex-direction: column;
+  }
+  
+  .education-icon {
+    align-self: center;
+  }
+}

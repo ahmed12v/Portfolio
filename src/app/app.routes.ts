@@ -1,3 +1,4 @@
+import { ExperienceComponent } from './pages/experience/experience.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { CoursesComponent } from './pages/courses/courses.component';
 import { SkillsComponent } from './pages/skills/skills.component';
@@ -40,6 +41,11 @@ export const routes: Routes = [
         path:'Project',
         loadComponent:()=>
             import('./pages/projects/projects.component').then((c)=>c.ProjectsComponent)
+    },
+    {
+        path:'exper',
+        loadComponent:()=>
+            import('./pages/experience/experience.component').then((c)=>c.ExperienceComponent)
     },
 
     {
