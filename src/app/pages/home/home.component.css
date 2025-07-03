@@ -3,17 +3,18 @@
         background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
                           url(../../../assets/Images/b158825b403e97a91f9704e8091d5ef3.jpg);
         background-size: cover;
-        background-position: center;
+        background-position: center center;
         background-repeat: no-repeat;
         min-height: 100vh; /* يضمن تغطية الصفحة دون مشاكل */
         width: 100%;
         position: relative;
+        object-fit: cover;
        
 }
 .contain{
     position: absolute; 
     top: 30%;
-    left: 10%;
+    
 }
 
 .savior-doctor{
@@ -99,9 +100,9 @@
     transform: translatey(-20px);
 }
 .MyAccounts{
-    position: absolute;
-    bottom:0% ;
-    left: 13%;
+  position: absolute;
+  bottom: 0%;
+  justify-content: center;
 }
 .brandIcon{
     padding: 12px;
@@ -116,14 +117,7 @@
 
 }
 
-@media(max-width : 780px){
-    .MyAccounts{
-         position: absolute;
-         bottom:0% ;
-         left: 21%;
-    }
-   
-}
+
 @media (max-width:780px) {
      .contain .Samii
     {
@@ -131,6 +125,11 @@
     }
     .frontend{
         font-size: 22px;
+    }
+    .contain{
+        left: 0%;
+        display: flex;
+        justify-content: center;
     }
 }
 /* --------------- */
