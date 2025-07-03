@@ -6,9 +6,10 @@
   
   <ul class="nav-links" [class.active]="isMenuOpen">
     <li ><a routerLink="home" routerLinkActive="ActiveNow" (click)="closeMenu()" class="navLinks">Home</a></li>
-    <li><a routerLink="/about" routerLinkActive="ActiveNow" (click)="closeMenu()"class="navLinks">About</a></li>
-    <li><a routerLink="projects" routerLinkActive="ActiveNow" (click)="closeMenu()" class="navLinks">Projects</a></li>
-    <li><a routerLink="courses" routerLinkActive="ActiveNow" (click)="closeMenu()"class="navLinks">Courses</a></li>
+    <li><a routerLink="About" routerLinkActive="ActiveNow" (click)="closeMenu()"class="navLinks">About</a></li>
+    <li><a routerLink="Skills" routerLinkActive="ActiveNow" (click)="closeMenu()"class="navLinks">Skills</a></li>
+    <li><a routerLink="/Project" routerLinkActive="ActiveNow" (click)="closeMenu()" class="navLinks">Projects</a></li>
+    <li><a routerLink="Cours" routerLinkActive="ActiveNow" (click)="closeMenu()"class="navLinks">Courses</a></li>
   </ul>
   
   <button class="mobile-menu-btn" (click)="toggleMenu()" aria-label="Toggle menu">

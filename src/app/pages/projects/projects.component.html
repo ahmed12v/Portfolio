@@ -1,0 +1,103 @@
+<div class="projects-section">
+  <div class="container">
+    <h2 class="section-title animate__animated">My Projects</h2>
+    
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-card" (click)="openProject(0)">
+        <div class="project-image">
+          <img src="../../../assets/Images/Savior.jpg" alt="Savior Website">
+          <div class="project-overlay">
+            <h3>Savior Website</h3>
+            <span class="view-details">View Details <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+        <div class="project-badge">Graduation Project</div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card" (click)="openProject(1)">
+        <div class="project-image">
+          <img src="../../../assets/Images/realState.jpg" alt="House Hub">
+          <div class="project-overlay">
+            <h3>House Hub</h3>
+            <span class="view-details">View Details <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+        <div class="project-badge">Real Project</div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card" (click)="openProject(2)">
+        <div class="project-image">
+          <img src="../../../assets/Images/Cafee.jpg" alt="Cafe System">
+          <div class="project-overlay">
+            <h3>Cafe System</h3>
+            <span class="view-details">View Details <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+        <div class="project-badge">Real Project</div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card" (click)="openProject(3)">
+        <div class="project-image">
+          <img src="../../../assets/Images/e-Commerce.jpg" alt="E-Commerce">
+          <div class="project-overlay">
+            <h3>E-Commerce</h3>
+            <span class="view-details">View Details <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+        <div class="project-badge">Academic Project</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Popup -->
+  <div class="project-popup" [class.active]="activePopup !== null">
+    <div class="popup-overlay" (click)="closeProject()"></div>
+    
+    <div class="popup-content" *ngIf="activePopup !== null">
+      <button class="close-btn" (click)="closeProject()">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div class="popup-header">
+        <h2>{{projects[activePopup].title}}</h2>
+        <div class="project-meta">
+          <span class="project-date">{{projects[activePopup].date}}</span>
+          <span class="project-badge">{{projects[activePopup].badge}}</span>
+        </div>
+      </div>
+
+      <div class="popup-body">
+        <div class="project-image">
+          <img [src]="'../../../assets/Images/' + projects[activePopup].image" [alt]="projects[activePopup].title">
+        </div>
+        
+        <div class="project-details">
+          <h3><i class="fas fa-code"></i> Technologies Used</h3>
+          <div class="tech-tags">
+            <span *ngFor="let tech of projects[activePopup].tech">{{tech}}</span>
+          </div>
+
+          <h3><i class="fas fa-star"></i> Key Features</h3>
+          <ul class="features-list">
+            <li *ngFor="let feature of projects[activePopup].features">
+              <i class="fas fa-check-circle"></i> {{feature}}
+            </li>
+          </ul>
+
+          <div class="project-actions">
+            <a *ngIf="projects[activePopup].liveUrl" [href]="projects[activePopup].liveUrl" target="_blank" class="btn btn-primary rounded-5">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <!-- <a *ngIf="projects[activePopup].codeUrl" [href]="projects[activePopup].codeUrl" target="_blank" class="btn btn-secondary rounded-5">
+              <i class="fab fa-github"></i> View Code
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,99 @@
+<!-- <div class="container p-5 text-center">
+
+    <h1 class="text-white">
+      name:  {{name()}}
+    </h1>
+    <h5 class="text-white-50">
+      previx:  {{previx()}}
+    </h5>
+    <button (click)="changeName('Ronaldo cccc')" class="btn btn-outline-warning rounded-5">
+        Change My Name 
+    </button>
+
+    <h1 class="text-white">
+       Number : {{number()}}
+    </h1>
+    <button (click)="UodateNumber(20)" class="btn btn-outline-warning rounded-5">
+        Change My Name 
+    </button>
+
+    <h3 class="text-white"> 
+     UserName ==> {{User().name}}
+    </h3>
+    <h3 class="text-white"> 
+     Loged ==>  {{User().logedIn}}
+    </h3>
+     <button (click)="changeUser()" class="btn btn-outline-warning rounded-5">
+        Change My Status 
+    </button>
+
+    <h4 class="text-primary">
+        Double : {{double()}}
+    </h4>
+    <button (click)="changeDouble(20)" class="btn btn-outline-info rounded-5">
+        New Double
+    </button>
+     <h4 class="text-primary">
+        Triple : {{trible()}}
+    </h4>
+
+
+
+</div> -->
+
+<div class="skills-section">
+  <div class="container">
+    <h2 class="section-title animate__animated animate__fadeInDown">Technical Skills</h2>
+    <div class="skills-grid">
+      <!-- Frontend Skills -->
+      <div class="skill-category animate__animated animate__fadeInLeft">
+        <h3 class="category-title">
+          <i class="fas fa-code"></i> Frontend Development
+        </h3>
+        <div class="skills-list">
+            @for (skil of frontendSkills; track $index) {
+                <div class="skill-item" >
+            <div class="skill-progress">
+              <div class="progress-bar" [style.width.%]="skil.level"></div>
+            </div>
+            <span class="skill-name">{{skil.name}}</span>
+            <span class="skill-level">{{skil.level}}%</span>
+          </div>
+            }
+          
+        </div>
+      </div>
+
+      <!-- Backend Skills -->
+      <div class="skill-category animate__animated animate__fadeInRight">
+        <h3 class="category-title">
+          <i class="fas fa-server"></i> Backend & Database
+        </h3>
+        <div class="skills-list">
+            @for (skill of backendSkills; track $index) {
+                <div class="skill-item" >
+            <div class="skill-progress">
+              <div class="progress-bar" [style.width.%]="skill.level"></div>
+            </div>
+            <span class="skill-name">{{skill.name}}</span>
+            <span class="skill-level">{{skill.level}}%</span>
+          </div>
+            }
+          
+        </div>
+      </div>
+
+      <!-- Other Skills -->
+      <div class="skill-category animate__animated animate__fadeInUp">
+        <h3 class="category-title">
+          <i class="fas fa-tools"></i> Other Skills
+        </h3>
+        <div class="skills-tags">
+            @for (ski of otherSkills; track $index) {
+                          <span class="skill-tag" >{{ski}}</span>
+            }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

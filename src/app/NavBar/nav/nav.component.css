@@ -8,7 +8,7 @@
 }
 
 .navbar {
-  background-color: transparent;
+  background-color: black;
   box-shadow: var(--shadow);
   padding: 1rem 2rem;
   display: flex;
@@ -110,7 +110,7 @@
 }
 .ActiveNow{
   font-weight: bold !important;
-  color: #0d4f9b !important;
+  color: #4ecca3 !important;
   transform: scale(1.2) !important;
   
 }
