@@ -119,8 +119,18 @@
 @media(max-width : 780px){
     .MyAccounts{
          position: absolute;
-    bottom:0% ;
-    left: 21%;
+         bottom:0% ;
+         left: 21%;
+    }
+   
+}
+@media (max-width:780px) {
+     .contain .Samii
+    {
+        font-size: 52px !important;
+    }
+    .frontend{
+        font-size: 22px;
     }
 }
 /* --------------- */
