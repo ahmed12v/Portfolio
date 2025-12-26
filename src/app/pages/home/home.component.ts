@@ -21,7 +21,7 @@ export class HomeComponent {
   {
     if(isPlatformBrowser(this.Platform))
     {
-    window.open('../../../assets/Images/Ahmed Sami Frontend Cv (2).pdf', '_blank');
+    window.open('https://drive.google.com/file/d/1zXvT6AtexNgjAvy4XzoptfmecV7cpr9B/view?usp=drive_link', '_blank');
     }
   }
 }
