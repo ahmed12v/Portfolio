@@ -76,7 +76,7 @@ export class ProjectsComponent {
         'Address management and coupon system',
         'Online payments with secure deployment'
       ],
-      liveUrl: 'https://my-first-prog-3fvta3ggs-ahmeds-projects-61e24b6b.vercel.app/login',
+      liveUrl: 'https://ec-store-ht2vlyyt8-ahmeds-projects-61e24b6b.vercel.app/login',
       codeUrl: '#'
     }
   ];
